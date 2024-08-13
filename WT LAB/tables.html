@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tables</title>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            text-align: center;
+        }
+        th {
+            background-color: rgb(239, 219, 195);
+        }
+        tr {
+            background-color: rgb(133, 229, 233);
+        }
+        th, td {
+            padding: 15px;
+        }
+        h1{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Time Table DS-2</h1>
+    <table style="width: 100%;">
+        <caption>Room No:704</caption>
+        <tr>
+            <th>DAY / HR</th>
+            <th>08:00 AM <br> TO <br>09:00 AM</th>
+            <th>09:00 AM <br> TO <br>10:00 AM</th>
+            <th rowspan="6">BREAK</th>
+            <th>10:30 AM <br> TO <br>11:30 AM</th>
+            <th>11:30 AM <br> TO <br>12:30 PM</th>
+            <th rowspan="6">LUNCH BREAK</th>
+            <th>01:45 PM <br> TO <br>02:45 PM</th>
+            <th>02:45 PM <br> TO <br>03:45 PM</th>
+        </tr>
+        <tr>
+            <td style="background-color:rgb(239,219,195);">MON</td>
+            <td>DM <br>(MOOC)</td>
+            <td>CC</td>
+            <td colspan="2">DAA Lab <br>Room No:408-A</td>
+            <td>DAA</td>
+            <td>ML</td>
+        </tr>
+        <tr>
+            <td style="background-color:rgb(239,219,195);">TUE</td>
+            <td>CC</td>
+            <td>WT</td>
+            <td colspan="2">WTT Lab <br>Room No:408-A</td>
+            <td>PA <br> (MOOC)</td>
+            <td>EMSME <br>(MOOC)</td>
+        </tr>
+        <tr>
+            <td style="background-color:rgb(239,219,195);">WED</td>
+            <td>EMSME <br>(MOOC)</td>
+            <td>ML</td>
+            <td>DAA</td>
+            <td>WT</td>
+            <td colspan="2">ML Lab <br> Room No:2707</td>
+        </tr>
+        <tr>
+            <td style="background-color:rgb(239,219,195);">THU</td>
+            <td>PA <br>(MOOC)</td>
+            <td>WT</td>
+            <td>CC</td>
+            <td>ML</td>
+            <td>LIB</td>
+            <td>DM <br>(MOOC)</td>
+        </tr>
+        <tr>
+            <td style="background-color:rgb(239,219,195);">FRI</td>
+            <td>PA <br>(MOOC)</td>
+            <td>DAA</td>
+            <td>DM <br>(MOOC)</td>
+            <td>EMSME <br>(MOOC)</td>
+            <td colspan="2">CC Lab <br>Room No:2607</td>
+        </tr>
+    </table>
+</body>
+</html>

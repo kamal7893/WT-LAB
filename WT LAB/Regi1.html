@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naukari</title>
+    <style>
+        h1{
+            text-align: center;
+            background-color: rgb(170, 227, 227);
+        }
+        fieldset{
+            background-color: rgb(243, 240, 235);
+            text-align: center;
+            margin-left: 400px;
+            margin-right: 400px;
+        }
+        legend{
+            background-color: gray;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1> Job Portal</h1>
+    <form>
+        <fieldset>
+            <legend>Naukari</legend>
+        <label for="fname">Name</label>
+        <input type="fname" name="fname" id="fname"><br> 
+        password <input type="password" min="5" max="15"> <br> 
+        email <input type="email" placeholder="example@gmail.com" required name="" id=""> <br> 
+        <label for=""> Address</label>
+        <input type="" address> <br> 
+        <label for=""> Education Qualifications </label>
+        <input type=""n name="Education Qualification"> <br>
+        <label for=""> Resume</label> 
+        <input type="">
+        <form >
+            <input type="file" id="myFile" name="filename">
+        </form> <br>
+        <label for=""> Gender </label>
+        <input type=""  list="Gender"> <br>
+        <datalist id="Gender"> 
+            <option value="Male"></option>
+            <option value="Female"></option>
+            <option value="Other"></option>
+        </datalist>
+        <label for=""> Experince </label>
+        <input type=""  list="Experince" required> <br>
+        <datalist id="Experince">
+            <option value="No Experince"></option>
+            <option value="1 year"></option>
+            <option value="2 years"></option>
+            <option value="3 years"></option>
+            <option value="4 years"></option>
+            <option value="5 years"></option>
+            <option value="Above 5 years"></option>
+        </datalist>
+        <label for="date"> Date of birth</label> 
+        <input type="date" name="" id=""> <br> 
+        <label for=""> phone</label> 
+        <input type="tel"> <br> 
+        <input type="submit">
+        <input type="reset">
+        <button type="button" onclick="alert('welcome')"> OK</button>
+        </fieldset>
+    </form>
+</body>
+</html>
