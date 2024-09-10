@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Events Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        .container {
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            text-align: center;
+        }
+        .log {
+            margin-top: 20px;
+            background-color: #e9ecef;
+            padding: 10px;
+            border-radius: 8px;
+            min-height: 150px;
+            text-align: left;
+            white-space: pre-wrap;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        input {
+            margin: 20px 0;
+            padding: 10px;
+            font-size: 16px;
+            width: 100%;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>JavaScript Events Demo</h2>
+
+        <!-- Mouse Events Section -->
+        <button id="mouse-btn">Mouse Actions (Click, Double-click, Hover)</button>
+
+        <!-- Keyboard Events Section -->
+        <input type="text" id="keyboard-input" placeholder="Type something here...">
+
+        <!-- Log Events -->
+        <div class="log" id="log-box">Event logs will appear here...</div>
+    </div>
+
+    <script>
+        const logBox = document.getElementById('log-box');
+        
+        // Utility function to log events
+        function logEvent(message) {
+            logBox.textContent += message + '\n';
+        }
+
+        // Mouse Events
+        const mouseBtn = document.getElementById('mouse-btn');
+
+        // 1. Click event
+        mouseBtn.addEventListener('click', () => {
+            logEvent('Mouse clicked');
+        });
+
+        // 2. Double-click event
+        mouseBtn.addEventListener('dblclick', () => {
+            logEvent('Mouse double-clicked');
+        });
+
+        // 3. Mouseover (hover) event
+        mouseBtn.addEventListener('mouseover', () => {
+            logEvent('Mouse hovered over button');
+        });
+
+        // Keyboard Events
+        const keyboardInput = document.getElementById('keyboard-input');
+
+        // 4. Keydown event
+        keyboardInput.addEventListener('keydown', (event) => {
+            logEvent(`Key pressed down: ${event.key}`);
+        });
+
+        // 5. Keyup event
+        keyboardInput.addEventListener('keyup', (event) => {
+            logEvent(`Key released: ${event.key}`);
+        });
+
+        // Window Event
+        // 6. Resize event
+        window.addEventListener('resize', () => {
+            const width = window.innerWidth;
+            const height = window.innerHeight;
+            logEvent(`Window resized to: ${width}px x ${height}px`);
+        });
+    </script>
+
+</body>
+</html>
