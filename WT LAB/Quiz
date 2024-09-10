@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <style>
+        body{
+            background-color: rgb(137, 244, 244);
+        }
+        #Quiz {
+            padding: 200px;
+        }
+        button {
+            float: right; 
+            margin-right: 50px;
+            background-color: rgb(244, 12, 24);
+            cursor: pointer; 
+            padding: 10px 20px; 
+        }
+    </style>
+</head>
+<body>
+    <div id="Quiz">
+        <h1 style="text-align: center;">HTML & CSS Quiz</h1>
+        <p style="font-family: Georgia, 'Times New Roman', Times, serif;">
+            This HTML document creates a simple quiz with five questions, utilizing basic HTML, CSS, and JavaScript. 
+            The quiz is contained within a div with the id "Quiz," which displays one question at a time. Each question 
+            has four possible answers presented as radio buttons. A "Next" button allows users to navigate through the quiz.
+
+            The CSS styles the quiz content by adding padding and applying a background color to the "Next" button. 
+            The button is positioned using float: right.
+
+            JavaScript is used to handle the quiz navigation. The nextPage() function updates the content inside the "Quiz" 
+            div based on the current page number, stored in the currentPage variable. As users click "Next," the quiz progresses 
+            through the questions and cycles back to the first question after the fifth one. This setup provides a basic yet 
+            functional multi-question quiz experience.
+        </p>
+    </div>
+    <button onclick="nextPage()">Next</button>
+    
+    <script>
+        let currentPage = 1;
+        function nextPage() {
+            currentPage++;
+            
+            if (currentPage === 2) {
+                document.getElementById('Quiz').innerHTML = `
+                    <h1>1. What does HTML stand for?</h1> 
+                    <input type="radio" name="f1" id="f1"> 
+                    <label for="f1">Home Tool Markup Language</label> <br>
+                    <input type="radio" name="f1" id="f2"> 
+                    <label for="f2">Hyper Text Markup Language</label> <br>
+                    <input type="radio" name="f1" id="f3"> 
+                    <label for="f3">Hyperlinks and Text Markup Language</label> <br>
+                    <input type="radio" name="f1" id="f4">
+                    <label for="f4">Hyper Text Manage Language</label>
+                `;
+            } else if (currentPage === 3) {
+                document.getElementById('Quiz').innerHTML = `
+                    <h1>2. What is the correct HTML element for inserting a line break?</h1>
+                    <input type="radio" name="f1" id="f1"> 
+                    <label for="f1">&lt;br&gt;</label> <br>
+                    <input type="radio" name="f1" id="f2"> 
+                    <label for="f2">&lt;lb&gt;</label> <br>
+                    <input type="radio" name="f1" id="f3"> 
+                    <label for="f3">&lt;cut&gt;</label> <br>
+                    <input type="radio" name="f1" id="f4">
+                    <label for="f4">&lt;break&gt;</label>
+                `;
+            } else if (currentPage === 4) {
+                document.getElementById('Quiz').innerHTML = `
+                    <h1>3. How many header tags are in HTML?</h1>
+                    <input type="radio" name="f1" id="f1"> 
+                    <label for="f1">4</label> <br>
+                    <input type="radio" name="f1" id="f2"> 
+                    <label for="f2">5</label> <br>
+                    <input type="radio" name="f1" id="f3"> 
+                    <label for="f3">6</label> <br>
+                    <input type="radio" name="f1" id="f4">
+                    <label for="f4">7</label>
+                `;
+            } else if (currentPage === 5) {
+                document.getElementById('Quiz').innerHTML = `
+                    <h1>4. Which character is used to indicate an end tag?</h1>
+                    <input type="radio" name="f1" id="f1"> 
+                    <label for="f1">&lt;/&gt;</label> <br>
+                    <input type="radio" name="f1" id="f2"> 
+                    <label for="f2">&gt;</label> <br>
+                    <input type="radio" name="f1" id="f3"> 
+                    <label for="f3">/</label> <br>
+                    <input type="radio" name="f1" id="f4">
+                    <label for="f4">|</label>
+                `;
+            } else if (currentPage === 6) {
+                document.getElementById('Quiz').innerHTML = `
+                    <h1>5. Which HTML tag is used to define an internal style sheet?</h1>
+                    <input type="radio" name="f1" id="f1"> 
+                    <label for="f1">&lt;style&gt;</label> <br>
+                    <input type="radio" name="f1" id="f2"> 
+                    <label for="f2">&lt;script&gt;</label> <br>
+                    <input type="radio" name="f1" id="f3"> 
+                    <label for="f3">&lt;css&gt;</label> <br>
+                    <input type="radio" name="f1" id="f4">
+                    <label for="f4">&lt;None&gt;</label>
+                `;
+            } else {
+                currentPage = 1;
+                document.getElementById('Quiz').innerHTML = `
+                    <h1>1. What does HTML stand for?</h1> 
+                    <input type="radio" name="f1" id="f1"> 
+                    <label for="f1">Home Tool Markup Language</label> <br>
+                    <input type="radio" name="f1" id="f2"> 
+                    <label for="f2">Hyper Text Markup Language</label> <br>
+                    <input type="radio" name="f1" id="f3"> 
+                    <label for="f3">Hyperlinks and Text Markup Language</label> <br>
+                    <input type="radio" name="f1" id="f4">
+                    <label for="f4">Hyper Text Manage Language</label>
+                `;
+            }
+        }
+    </script>
+</body>
+</html>
